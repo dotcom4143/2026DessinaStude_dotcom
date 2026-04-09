@@ -8,18 +8,18 @@ public class EnemyChase : MonoBehaviour
 
     void Start()
     {
-        GameObject Player = GameObject.FindWithTag("Player");
+        GameObject player = GameObject.FindWithTag("Player");
         
-        if(Player != null)
+        if(player != null)
         {
-            target = Player.transform;
+            target = player.transform;
         }
 
     }
 
     void Update()
     {
-        if (target != null) return;
+        if (target == null) return;
 
         Vector3 direction = target.position - transform.position;
         direction.y = 0f;

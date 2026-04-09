@@ -14,11 +14,11 @@ public class PlayerHealth1 : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if(IsDead) return;
+        if (IsDead) return;
 
         currentHp -= damage;
 
-        if(currentHp <= 0)
+        if (currentHp <= 0)
         {
             currentHp = 0;
             Die();
